@@ -1,34 +1,34 @@
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
-codirector, % Uncomment to add a codirector to the title page
+%codirector, % Uncomment to add a codirector to the title page
 ]{charter} 
 
 
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Sistema de monitoreo de un equipo de extracción de petróleo} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
-\posgrado{Carrera de Especialización en Sistemas Embebidos} 
-%\posgrado{Carrera de Especialización en Internet de las Cosas} 
+%\posgrado{Carrera de Especialización en Sistemas Embebidos} 
+\posgrado{Carrera de Especialización en Internet de las Cosas} 
 %\posgrado{Carrera de Especialización en Intelegencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Nombre del Autor} 
+\autor{Ing. Eduardo Agustín Sciutto} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Mag. Adrián S. Nowik}
+\pertenenciaDirector{Pan American Energy} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{John Doe} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Ing. Nicolás D. Brunini}
+\empresaCliente{Pan American Energy}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
 \juradoUno{Nombre y Apellido (1)}
@@ -38,9 +38,9 @@ codirector, % Uncomment to add a codirector to the title page
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{30 de abril de 2021}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2021} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2022}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{21 de junio de 2022}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{9 de agosto de 2022} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{21 de junio de 2023}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -69,7 +69,7 @@ codirector, % Uncomment to add a codirector to the title page
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-%1      & Se completa hasta el punto 4 inclusive                 & dd/mm/aaaa \\ \hline
+1      & Se completa hasta el punto 5 inclusive                 & 2 de julio de 2022 \\ \hline
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -92,7 +92,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de un calefón}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un sistema de monitoreo de un equipo de extracción de petróleo, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y ARS650.000,00, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -116,56 +116,44 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 
-\begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
+\begin{consigna}{black} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
 
-El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
+La gestión eficiente de un yacimiento productor de petróleo no electrificado y de periferia plantea grandes desafíos. El modelo de operación usualmente se basa en la presencia diaria de cuadrillas de operarios, cuya principal función es recorrer cada instalación y realizar un relevamiento funcional. Excepcionalmente, ejecutan alguna tarea correctiva en función de lo identificado en la visita.
 
-Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+En la actualidad, existen zonas donde los aparatos individuales de bombeo (AIB) no disponen de supervisión remota, dado que originalmente la implementación de una solución tradicional de telemetría fue considerada económicamente inviable. La principal razón, es el costo de proveer un sistema alternativo de energía confiable para dicho equipamiento, generalmente basado en paneles solares y baterías. Otra consideración, es el riesgo de sabotaje y robo de equipamiento de medición costoso en zonas alejadas y con vigilancia deficiente. 
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+El hecho de que un AIB deje de funcionar de manera imprevista, afecta directamente la producción de petróleo, por lo que resulta de valor disponer de una alerta inmediata ante dicha situación. Además, la información histórica de los períodos de tiempo de no funcionamiento facilita y hace más precisa la elaboración del informe de down-time por parte de los supervisores de producción.
+ 
+Recientemente, Pan American Energy (PAE) implementó una red LoRaWAN propia con extensa cobertura en el yacimiento. Sintéticamente, LoRaWAN es una tecnología de comunicación inalámbrica bidireccional, que hace posible administrar muchos nodos alimentados a baterías (con vida útil típica de varios años) conectados hasta varios kilómetros de distancia y transmitiendo a una muy baja tasa de datos (decenas de bytes pocas veces al día). Estas características hacen viable una implementación de internet de las cosas industrial (IIoT) para el caso mencionado, resaltando el aporte de mayor eficiencia y de reducción de costos operativos.
 
-\begin{itemize}
-	\item ¿Cómo se vincula este proyecto con la misión de la organización?
-	\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-	\item ¿Cuáles son las necesidades que debe satisfacer?
-	\item ¿Por dónde pasa la innovación?
-\end{itemize}
+Otro aspecto para considerar es el de buscar una solución de rápida implementación y de mayor flexibilidad ante cambios, que aporte información relevante a los usuarios finales. Implementar un sistema de SCADA con tecnología tradicional es un trabajo complejo y demandante de tiempo, requiere la intervención de profesionales de distintos sectores dentro de la empresa, ya que involucra tareas de configuración, calibración y enrutamiento en distintos sistemas on-premise. En muchos casos es justificada su utilización, dada la criticidad e importancia de los procesos que se controlan y monitorean. Por otro lado, se ve una oportunidad en la utilización de distintos servicios en la nube, principalmente para procesar fuentes de datos no críticos que complementan o brindan nueva información de variables de campo y que se adaptan fácilmente a los cambios en las necesidades de visualización y notificación de los usuarios finales.
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase, se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+El objeto del presente proyecto es el desarrollo de una solución de monitoreo y alarmas de bajo costo para equipos AIB de un yacimiento de periferia. Se utilizarán una red LoRaWAN y componentes en la nube de Microsoft Azure.
+En particular, se implementará un prototipo que medirá el estado funcional del AIB. El servidor de red LoRaWAN canalizará la información generada por el sensor a un grupo de recursos creados en la nube de Microsoft Azure, mediante el protocolo AMQP.
+En la nube se realizarán diferentes procesos, que contemplan la decodificación de la información, almacenamiento en base de datos y utilización de una aplicación back end que administrará el acceso a información estadística y la notificación de alertas a los usuarios autorizados.
+Los usuarios dispondrán de al menos un tipo de front end para el consumo de la información.
+
+En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema descripto.
 
 %\vspace{25px}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.5\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=.8\textwidth]{./Figuras/diagrama_bloques_conceptual2.png}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama, preferentemente en la gama de colores pastel.
+
 \end{consigna}
 
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} 
-Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
- 
-Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
-
-\begin{itemize}
-\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
-\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
-\end{itemize}
-
-Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
+\begin{consigna}{black} 
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -174,32 +162,30 @@ Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por e
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+Auspiciante   & Juan A. Aranguren & \empclientename & Exec. Manager TEC-IT       	\\ \hline
+Cliente       & \clientename      &\empclientename &  Leader UPO-OP II D5      	\\ \hline
+Impulsor      & Eduardo O. Domínguez                  &\empclientename & Exec. Manager IT Regional       	\\ \hline
+Responsable   & \authorname       &\empclientename        	& SR Specialist TEC-IT 	\\ \hline
+Colaboradores & Gustavo G. Conrad \newline 
+				Germán Gornatti					&\empclientename             	& Specialist TEC-IT  \\ \hline
+%			& Germán Gornatti &\empclientename & SR Engineer UPO-Control Engineering     \\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+%Equipo        & miembro1 \newline 
+%				miembro2          &              	&        	\\ \hline
+Opositores    &  Sector de OT                 &  \empclientename            	&   USP-OP     	\\ \hline
+Usuario final & Nestor O. Bochatey  & \empclientename             	& Field Foreman UPO-OP II D5       	\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
+A continuación se listan las principales características de cada interesado.
 
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
 \begin{itemize}
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-	\item Orientador: María Gómez va a poder ayudar mucho con la definición de los requerimientos.
+	\item Auspiciante: muy interesado en que la implementación resulte exitosa y sirva de modelo para nuevos desarrollos.
+	\item Cliente: desea obtener resultados en corto tiempo. Se debe tener riguroso seguimiento del plan de trabajo acordado.
+	\item Colaboradores: su dedicación a este proyecto es de tiempo parcial y no está reflejada en los objetivos de desempeño con sus gerencias funcionales. Se debe trabajar en sostener la motivación.
+	\item Orientador: profesional de alta capacidad técnica y de gestión. Tener muy en cuenta sus observaciones.
+	\item Usuario final: desde el inicio mantener un vínculo estrecho y capacitarlo adecuadamente en el uso de las nuevas herramientas. Buscar de convertirlo en un aliado.
+	\item Opositores: el desarrollo del proyecto puede afectar intereses y actual metodología de trabajo del equipo de tecnología operacional (TO).
 \end{itemize}
 
 \end{consigna}
@@ -209,39 +195,54 @@ Por ejemplo:
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
+\begin{consigna}{black}
+El propósito de este proyecto es impulsar la aplicación de nuevas tecnologías en la industria del petróleo y gas. Se busca implementar un sistema de monitoreo y alertas, utilizando una arquitectura típica de IIoT, para casos donde un sistema tradicional de telemetría no ha resultado económicamente viable.
 
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
 \end{consigna}
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+\begin{consigna}{black}
+El alcance del trabajo final incluye los siguientes aspectos.
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+\begin{itemize}
+\item Adaptación de un nodo comercial LoRaWAN para detectar el estado de Marcha/Parada del motor de un AIB. Opcionalmente se evaluará incorporar otra variable física de tipo analógica, por ejemplo, vibración. Se busca realizar la selección, la integración y el ensayo del conjunto nodo más transductores.
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
+\item Conexión entre el servidor de red LoRaWAN y el componente IoT Hub de Microsoft Azure en la nube, utilizando el protocolo MQTT o AMQP.
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+\item Decodificación de la carga útil de los mensajes enviados por los sensores. Filtrado y almacenamiento de información relevante en una base de datos.
 
+\item Creación de una aplicación de servidor y de una aplicación de interfaz de usuario para gestionar y entregar información de monitoreo y alarmas a los usuarios finales.
+
+\end{itemize}
+
+No se incluye en el alcance del proyecto lo siguiente.
+
+\begin{itemize}
+
+\item Estudios de confiabilidad y análisis de fallas relacionados al mantenimiento predictivo del prototipo a implementar.
+
+\item Arquitectura y configuración de la red LoRaWAN que da servicio de conexión de los sensores.
+
+\end{itemize}
 \end{consigna}
 
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+\begin{consigna}{black}
+Para el desarrollo del presente proyecto se asume lo siguiente.
 
 \begin{itemize}
-	\item Supuesto 1
-	\item Supuesto 2...
+	\item Se contará con el hardware y materiales necesarios para implementar los prototipos de medición. Además, se autorizará el alta de los mismos a la red LoRaWAN existente.
+\item Se tendrá acceso y apoyo de personal calificado para instalar y manipular los prototipos de medición en un grupo de AIB operativos del yacimiento.
+\item Se dispondrá de una suscripción activa a un grupo de recursos para implementar todos los componentes de la solución en la nube de Microsoft Azure.
+\item Existirán acuerdos y aprobaciones de los sectores de Seguridad Informática y Tecnología Operacional para establecer las conexiones de datos entre los componentes de la solución.
+
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
 \end{consigna}
 
 \section{6. Requerimientos}
