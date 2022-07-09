@@ -21,14 +21,14 @@
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Mag. Ing. Adrián S. Nowik}
-\pertenenciaDirector{Pan American Energy} 
+\pertenenciaDirector{UP/PAE} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{John Doe} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
 \cliente{Ing. Nicolás D. Brunini}
-\empresaCliente{Pan American Energy}
+\empresaCliente{PAE}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
 \juradoUno{Nombre y Apellido (1)}
@@ -70,7 +70,8 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                 & 2 de julio de 2022 \\ \hline
-%2      & Se completa hasta el punto 7 inclusive
+2      & Se completa hasta el punto 9 inclusive					& 9 de julio de 2022 \\
+\hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -116,7 +117,7 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 
-\begin{consigna}{black} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
+% El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
 
 La gestión eficiente de un yacimiento productor de petróleo no electrificado y de periferia plantea grandes desafíos. El modelo de operación usualmente se basa en la presencia diaria de cuadrillas de operarios, cuya principal función es recorrer cada instalación y realizar un relevamiento funcional. Excepcionalmente, ejecutan alguna tarea correctiva en función de lo identificado en la visita.
 
@@ -124,7 +125,7 @@ En la actualidad, existen zonas donde los aparatos individuales de bombeo (AIB) 
 
 El hecho de que un AIB deje de funcionar de manera imprevista, afecta directamente la producción de petróleo, por lo que resulta de valor disponer de una alerta inmediata ante dicha situación. Además, la información histórica de los períodos de tiempo de no funcionamiento facilita y hace más precisa la elaboración del informe de down-time por parte de los supervisores de producción.
  
-Recientemente, Pan American Energy (PAE) implementó una red LoRaWAN propia con extensa cobertura en el yacimiento. Sintéticamente, LoRaWAN es una tecnología de comunicación inalámbrica bidireccional, que hace posible administrar muchos nodos alimentados a baterías (con vida útil típica de varios años) conectados hasta varios kilómetros de distancia y transmitiendo a una muy baja tasa de datos (decenas de bytes pocas veces al día). Estas características hacen viable una implementación de internet de las cosas industrial (IIoT) para el caso mencionado, resaltando el aporte de mayor eficiencia y de reducción de costos operativos.
+Recientemente, la empresa operadora del yacimiento implementó una red LoRaWAN propia con extensa cobertura en el yacimiento. Sintéticamente, LoRaWAN es una tecnología de comunicación inalámbrica bidireccional, que hace posible administrar muchos nodos alimentados a baterías (con vida útil típica de varios años) conectados hasta varios kilómetros de distancia y transmitiendo a una muy baja tasa de datos (decenas de bytes pocas veces al día). Estas características hacen viable una implementación de internet de las cosas industrial (IIoT) para el caso mencionado, resaltando el aporte de mayor eficiencia y de reducción de costos operativos.
 
 Otro aspecto para considerar es el de buscar una solución de rápida implementación y de mayor flexibilidad ante cambios, que aporte información relevante a los usuarios finales. Implementar un sistema de SCADA con tecnología tradicional es un trabajo complejo y demandante de tiempo, requiere la intervención de profesionales de distintos sectores dentro de la empresa, ya que involucra tareas de configuración, calibración y enrutamiento en distintos sistemas on-premise. En muchos casos es justificada su utilización, dada la criticidad e importancia de los procesos que se controlan y monitorean. Por otro lado, se ve una oportunidad en la utilización de distintos servicios en la nube, principalmente para procesar fuentes de datos no críticos que complementan o brindan nueva información de variables de campo y que se adaptan fácilmente a los cambios en las necesidades de visualización y notificación de los usuarios finales.
 
@@ -147,13 +148,11 @@ En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistem
 \vspace{25px}
 
 
-\end{consigna}
 
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{black} 
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -188,22 +187,18 @@ A continuación se listan las principales características de cada interesado.
 	\item Opositores: el desarrollo del proyecto puede afectar intereses y actual metodología de trabajo del equipo de tecnología operacional (TO).
 \end{itemize}
 
-\end{consigna}
 
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{black}
 El propósito de este proyecto es impulsar la aplicación de nuevas tecnologías en la industria del petróleo y gas. Se busca implementar un sistema de monitoreo y alertas, utilizando una arquitectura típica de IIoT, para casos donde un sistema tradicional de telemetría no ha resultado económicamente viable.
 
-\end{consigna}
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{black}
 El alcance del trabajo final incluye los siguientes aspectos.
 
 \begin{itemize}
@@ -226,74 +221,107 @@ No se incluye en el alcance del proyecto lo siguiente.
 \item Arquitectura y configuración de la red LoRaWAN que da servicio de conexión de los sensores.
 
 \end{itemize}
-\end{consigna}
+
 
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{black}
 Para el desarrollo del presente proyecto se asume lo siguiente.
 
 \begin{itemize}
-	\item Se contará con el hardware y materiales necesarios para implementar los prototipos de medición. Además, se autorizará el alta de los mismos a la red LoRaWAN existente.
+\item Se contará con el hardware y materiales necesarios para implementar los prototipos de medición. Además, se autorizará el alta de los mismos a la red LoRaWAN existente.
 \item Se tendrá acceso y apoyo de personal calificado para instalar y manipular los prototipos de medición en un grupo de AIB operativos del yacimiento.
 \item Se dispondrá de una suscripción activa a un grupo de recursos para implementar todos los componentes de la solución en la nube de Microsoft Azure.
 \item Existirán acuerdos y aprobaciones de los sectores de Seguridad Informática y Tecnología Operacional para establecer las conexiones de datos entre los componentes de la solución.
 
 \end{itemize}
 
-\end{consigna}
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
-
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible estar agruparlos por afinidad, por ejemplo:
-
+%\begin{consigna}{red}
+Se presentan a continuación los requerimientos del proyecto
 \begin{enumerate}
-	\item Requerimientos funcionales
+	\item Requerimientos asociados al dispositivo de medición
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item No debe requerir mano de obra calificada tanto para la instalación como para la operación cotidiana.
+			\item Debe ser robusto y soportar condiciones de clima extremo (grado de protección IP 67, soportar temperaturas entre -20°C y 50°C).
+			\item Debe funcionar con baterías internas y poseer una autonomía de al menos 3 años.
+			\item La batería debe ser comercialmente asequible y de fácil reemplazo.
+			\item El estado e información de los sensores del dispositivo se deben poder consultar mediante una aplicación inalámbrica desde un celular y de forma sencilla.
+			\item Debe permitir el traslado a una nueva ubicación sin requerir una re-configuración local.
+			\item Debe detectar y notificar de forma inmediata si un sensor tiene una falla de cableado.
 		\end{enumerate}
-	\item Requerimientos de documentación
+		
+	\item Requerimientos asociados a la colecta e identificación de mensajes generados por los dispositivos
 		\begin{enumerate}
-			\item Requerimiento 1
-			\item Requerimiento 2 (prioridad menor)
+			\item Se deberá definir un nomenclador de tópicos que sea flexible y escalable.
+			\item La estructura de la carga útil del mensaje debe soportar futuras  incorporaciones de sensores.
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
-\end{enumerate}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
+	\item Requerimientos asociados al software en la nube
+		\begin{enumerate}
+			\item Se deberán utilizar componentes de la plataforma Azure de Microsoft.
+			\item Los mensajes de los dispositivos se enviarán a un componente Iothub mediante protocolo AMQP.
+			\item Se deberá decodificar y enrutar adecuadamente el flujo de datos proveniente de Iothub.
+			\item Se debe establecer un flujo de datos hacia una base de datos de históricos.
+			\item Se debe establecer un flujo de datos para procesar y enviar notificaciones de alarmas.
+			\item Se deberá definir un mecanismo de notificación de alarmas y eventos a los usuarios registrados. Podrá ser por email y/o Telegram.
+			\item La aplicación web dispondrá de un panel para visualizar información histórica de cada dispositivo.
+			\item La aplicación web permitirá la consulta de eventos y alarmas.
+Se debe recibir una notificación de forma inmediata ante un paro del motor.
+			\item Se deben recibir notificaciones de advertencia de nivel de batería bajo y algún otro parámetro que se identifique de utilidad, para realizar un correcto mantenimiento preventivo.
+		\end{enumerate}
 
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
+	\item Requerimientos de integridad y seguridad
+		\begin{enumerate}
+			\item Se deberá establecer un mecanismo seguro de gestión y validación de usuarios de la aplicación web.
+			\item El acceso a la configuración de los dispositivos de medición estará protegido por un usuario y contraseña. Será utilizado únicamente por personal autorizado del sector TI de la empresa.
+		\end{enumerate}
+	\end{enumerate}
 
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
 
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+%\begin{consigna}{red}
+%Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+%
+%El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
+%
+%Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
+%\end{consigna}
+Para la elaboración de historias de usuario, se definió un índice de ponderación compuesto por la suma de tres propiedades: dificultad, complejidad e incertidumbre o riesgo. Cada propiedad es cuantificada mediante una serie de Fibonacci (0, 1, 2, 3, 5, 8, 13, …) adoptándose el siguiente criterio que aplica a las tres propiedades por igual.
+\begin{itemize}
+\item Valores: 0, 1, 2 es una cuantificación baja.
+\item Valores: 3 y 5 es una cuantificación media.
+\item Valores: 8 o superior es una cuantificación alta.
+\end{itemize}
 
-El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
+A continuación, se detallan las historias de usuario recopiladas.
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
-\end{consigna}
+\begin{itemize}
+
+\item Como supervisor de producción, quiero ser notificado de la parada de un AIB de inmediato para poder enviar una cuadrilla y minimizar el downtime. Ponderación: 12 (dificultad:5, complejidad:5, riesgo:2).
+
+\item Como supervisor de producción, quiero tener acceso a una pantalla sencilla que me muestre el estado histórico de un AIB para poder calcular fácilmente el downtime. Ponderación: 10 (dificultad:5, complejidad:3, riesgo:2).
+
+\item Como supervisor de producción, deseo recibir las notificaciones importantes en mi celular para tener mejor tiempo de respuesta, ya que no siempre estoy en la oficina. Ponderación: 16 (dificultad:8, complejidad:5, riesgo:3).
+
+\item Como encargado de mantenimiento, quiero tener información frecuente del estado de carga de las baterías para programar eficientemente las tareas de las cuadrillas del sector. Ponderación: 6 (dificultad:2, complejidad:3, riesgo:1).
+
+\item Como jefe de distrito, quiero que mis colaboradores optimicen sus salidas al campo para poder dedicar más tiempo a tareas analíticas en la oficina. Ponderación: 12 (dificultad:5, complejidad:5, riesgo:2).
+
+\item Como jefe de distrito, quiero minimizar el uso de las horas de cuadrilla para poder reducir costos operativos. Ponderación: 12 (dificultad:5, complejidad:5, riesgo:2).
+
+\item Como referente de TI, quiero que la aplicación solo la puedan utilizar usuarios autorizados para preservar la confidencialidad e integridad de los datos. Ponderación: 11 (dificultad:3, complejidad:5, riesgo:3).
+
+\item Como referente de TI, quiero democratizar el acceso a la información para que nuevos usuarios puedan aportar más valor a sus tareas. Ponderación: 12 (dificultad:5, complejidad:2, riesgo:5).
+
+\item Como desarrollador de la aplicación, quiero armar un sistema flexible y escalable para incorporar nuevas funcionalidades en el futuro. Ponderación: 15 (dificultad:5, complejidad:5, riesgo:5).
+\end{itemize}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
