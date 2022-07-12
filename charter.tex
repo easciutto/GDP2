@@ -93,7 +93,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un sistema de monitoreo de un equipo de extracción de petróleo, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y ARS650.000,00, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un sistema de monitoreo de un equipo de extracción de petróleo, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y ARS 650.000,00, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -119,18 +119,17 @@ Se adjunta a esta acta la planificación inicial.
 
 % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección
 
-La gestión eficiente de un yacimiento productor de petróleo no electrificado y de periferia plantea grandes desafíos. El modelo de operación usualmente se basa en la presencia diaria de cuadrillas de operarios, cuya principal función es recorrer cada instalación y realizar un relevamiento funcional. Excepcionalmente, ejecutan alguna tarea correctiva en función de lo identificado en la visita.
-
-En la actualidad, existen zonas donde los aparatos individuales de bombeo (AIB) no disponen de supervisión remota, dado que originalmente la implementación de una solución tradicional de telemetría fue considerada económicamente inviable. La principal razón, es el costo de proveer un sistema alternativo de energía confiable para dicho equipamiento, generalmente basado en paneles solares y baterías. Otra consideración, es el riesgo de sabotaje y robo de equipamiento de medición costoso en zonas alejadas y con vigilancia deficiente. 
+La gestión eficiente de un yacimiento productor de petróleo no electrificado y de periferia plantea grandes desafíos. El modelo de operación usualmente se basa en la presencia diaria de cuadrillas de operarios cuya principal función es recorrer cada instalación y realizar un relevamiento funcional. Excepcionalmente, ejecutan alguna tarea correctiva en función de lo identificado en la visita.
+En la actualidad, existen zonas donde los aparatos individuales de bombeo (AIB) no disponen de supervisión remota dado que originalmente la implementación de una solución tradicional de telemetría fue considerada económicamente inviable. La principal razón, es el costo de proveer un sistema alternativo de energía confiable para dicho equipamiento que generalmente está basado en paneles solares y baterías. Otra consideración es el riesgo de sabotaje y robo de equipamiento de medición costoso en zonas alejadas y con vigilancia deficiente. 
 
 El hecho de que un AIB deje de funcionar de manera imprevista, afecta directamente la producción de petróleo, por lo que resulta de valor disponer de una alerta inmediata ante dicha situación. Además, la información histórica de los períodos de tiempo de no funcionamiento facilita y hace más precisa la elaboración del informe de down-time por parte de los supervisores de producción.
  
 Recientemente, la empresa operadora del yacimiento implementó una red LoRaWAN propia con extensa cobertura en el yacimiento. Sintéticamente, LoRaWAN es una tecnología de comunicación inalámbrica bidireccional, que hace posible administrar muchos nodos alimentados a baterías (con vida útil típica de varios años) conectados hasta varios kilómetros de distancia y transmitiendo a una muy baja tasa de datos (decenas de bytes pocas veces al día). Estas características hacen viable una implementación de internet de las cosas industrial (IIoT) para el caso mencionado, resaltando el aporte de mayor eficiencia y de reducción de costos operativos.
 
-Otro aspecto para considerar es el de buscar una solución de rápida implementación y de mayor flexibilidad ante cambios, que aporte información relevante a los usuarios finales. Implementar un sistema de SCADA con tecnología tradicional es un trabajo complejo y demandante de tiempo, requiere la intervención de profesionales de distintos sectores dentro de la empresa, ya que involucra tareas de configuración, calibración y enrutamiento en distintos sistemas on-premise. En muchos casos es justificada su utilización, dada la criticidad e importancia de los procesos que se controlan y monitorean. Por otro lado, se ve una oportunidad en la utilización de distintos servicios en la nube, principalmente para procesar fuentes de datos no críticos que complementan o brindan nueva información de variables de campo y que se adaptan fácilmente a los cambios en las necesidades de visualización y notificación de los usuarios finales.
+Otro aspecto para considerar es el de buscar una solución de rápida implementación y de mayor flexibilidad ante cambios, que aporte información relevante a los usuarios finales. Implementar un sistema de SCADA con tecnología tradicional es un trabajo complejo y demandante de tiempo, requiere la intervención de profesionales de distintos sectores dentro de la empresa ya que involucra tareas de configuración, calibración y enrutamiento en distintos sistemas on-premise. En muchos casos es justificada su utilización dada la criticidad e importancia de los procesos que se controlan y monitorean. Por otro lado, se ve una oportunidad en la utilización de distintos servicios en la nube, principalmente para procesar fuentes de datos no críticos que complementan o brindan nueva información de variables de campo y que se adaptan fácilmente a los cambios en las necesidades de visualización y notificación de los usuarios finales.
 
 El objeto del presente proyecto es el desarrollo de una solución de monitoreo y alarmas de bajo costo para equipos AIB de un yacimiento de periferia. Se utilizarán una red LoRaWAN y componentes en la nube de Microsoft Azure.
-En particular, se implementará un prototipo que medirá el estado funcional del AIB. El servidor de red LoRaWAN canalizará la información generada por el sensor a un grupo de recursos creados en la nube de Microsoft Azure, mediante el protocolo AMQP.
+En particular, se implementará un prototipo que medirá el estado funcional del AIB. El servidor de red LoRaWAN canalizará la información generada por el sensor a un grupo de recursos creados en la nube de Microsoft Azure mediante el protocolo AMQP.
 En la nube se realizarán diferentes procesos, que contemplan la decodificación de la información, almacenamiento en base de datos y utilización de una aplicación back end que administrará el acceso a información estadística y la notificación de alertas a los usuarios autorizados.
 Los usuarios dispondrán de al menos un tipo de front end para el consumo de la información.
 
@@ -241,30 +240,30 @@ Para el desarrollo del presente proyecto se asume lo siguiente.
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 %\begin{consigna}{red}
-Se presentan a continuación los requerimientos del proyecto
+Se presentan a continuación los requerimientos del proyecto.
 \begin{enumerate}
-	\item Requerimientos asociados al dispositivo de medición
+	\item Requerimientos asociados al dispositivo de medición.
 		\begin{enumerate}
-			\item No debe requerir mano de obra calificada tanto para la instalación como para la operación cotidiana.
+			\item No debe requerir mano de obra calificada, tanto para la instalación como para la operación cotidiana.
 			\item Debe ser robusto y soportar condiciones de clima extremo (grado de protección IP 67, soportar temperaturas entre -20°C y 50°C).
 			\item Debe funcionar con baterías internas y poseer una autonomía de al menos 3 años.
 			\item La batería debe ser comercialmente asequible y de fácil reemplazo.
 			\item El estado e información de los sensores del dispositivo se deben poder consultar mediante una aplicación inalámbrica desde un celular y de forma sencilla.
-			\item Debe permitir el traslado a una nueva ubicación sin requerir una re-configuración local.
+			\item Debe permitir el traslado a una nueva ubicación sin requerir una reconfiguración local.
 			\item Debe detectar y notificar de forma inmediata si un sensor tiene una falla de cableado.
 		\end{enumerate}
 		
-	\item Requerimientos asociados a la colecta e identificación de mensajes generados por los dispositivos
+	\item Requerimientos asociados a la colecta e identificación de mensajes generados por los dispositivos.
 		\begin{enumerate}
 			\item Se deberá definir un nomenclador de tópicos que sea flexible y escalable.
 			\item La estructura de la carga útil del mensaje debe soportar futuras  incorporaciones de sensores.
 		\end{enumerate}
 
-	\item Requerimientos asociados al software en la nube
+	\item Requerimientos asociados al software en la nube.
 		\begin{enumerate}
 			\item Se deberán utilizar componentes de la plataforma Azure de Microsoft.
-			\item Los mensajes de los dispositivos se enviarán a un componente Iothub mediante protocolo AMQP.
-			\item Se deberá decodificar y enrutar adecuadamente el flujo de datos proveniente de Iothub.
+			\item Los mensajes de los dispositivos se enviarán a un componente IoT Hub mediante protocolo AMQP.
+			\item Se deberá decodificar y enrutar adecuadamente el flujo de datos proveniente de IoT Hub.
 			\item Se debe establecer un flujo de datos hacia una base de datos de históricos.
 			\item Se debe establecer un flujo de datos para procesar y enviar notificaciones de alarmas.
 			\item Se deberá definir un mecanismo de notificación de alarmas y eventos a los usuarios registrados. Podrá ser por email y/o Telegram.
@@ -274,11 +273,21 @@ Se debe recibir una notificación de forma inmediata ante un paro del motor.
 			\item Se deben recibir notificaciones de advertencia de nivel de batería bajo y algún otro parámetro que se identifique de utilidad, para realizar un correcto mantenimiento preventivo.
 		\end{enumerate}
 
-	\item Requerimientos de integridad y seguridad
+	\item Requerimientos de integridad y seguridad.
 		\begin{enumerate}
 			\item Se deberá establecer un mecanismo seguro de gestión y validación de usuarios de la aplicación web.
 			\item El acceso a la configuración de los dispositivos de medición estará protegido por un usuario y contraseña. Será utilizado únicamente por personal autorizado del sector TI de la empresa.
 		\end{enumerate}
+	
+	\item Requerimientos de documentación.
+		\begin{enumerate}
+			\item Se deberá elaborar el manual de configuración e instalación del dispositivo de medición.			
+			\item Se deberá documentar la configuración de todos los componentes desplegados en Microsoft Azure.
+			\item Se deberá elaborar el manual de uso del software de usuario.
+			\item Se deberá desarrollar el informe de avance del proyecto.
+			\item Se deberá desarrollar la memoria final del proyecto.
+		\end{enumerate}
+		
 	\end{enumerate}
 
 
@@ -293,7 +302,7 @@ Se debe recibir una notificación de forma inmediata ante un paro del motor.
 %
 %Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
 %\end{consigna}
-Para la elaboración de historias de usuario, se definió un índice de ponderación compuesto por la suma de tres propiedades: dificultad, complejidad e incertidumbre o riesgo. Cada propiedad es cuantificada mediante una serie de Fibonacci (0, 1, 2, 3, 5, 8, 13, …) adoptándose el siguiente criterio que aplica a las tres propiedades por igual.
+Para la elaboración de historias de usuario se definió un índice de ponderación compuesto por la suma de tres propiedades: dificultad, complejidad e incertidumbre o riesgo. Cada propiedad es cuantificada mediante la serie de Fibonacci (0, 1, 2, 3, 5, 8, 13, …) adoptándose el siguiente criterio que aplica a las tres propiedades por igual.
 \begin{itemize}
 \item Valores: 0, 1, 2 es una cuantificación baja.
 \item Valores: 3 y 5 es una cuantificación media.
@@ -304,77 +313,101 @@ A continuación, se detallan las historias de usuario recopiladas.
 
 \begin{itemize}
 
-\item Como supervisor de producción, quiero ser notificado de la parada de un AIB de inmediato para poder enviar una cuadrilla y minimizar el downtime. Ponderación: 12 (dificultad:5, complejidad:5, riesgo:2).
+\item Como supervisor de producción quiero ser notificado de la parada de un AIB de inmediato para poder enviar una cuadrilla y minimizar el downtime. Ponderación: 12 (dificultad: 5, complejidad: 5, riesgo: 2).
 
-\item Como supervisor de producción, quiero tener acceso a una pantalla sencilla que me muestre el estado histórico de un AIB para poder calcular fácilmente el downtime. Ponderación: 10 (dificultad:5, complejidad:3, riesgo:2).
+\item Como supervisor de producción quiero tener acceso a una pantalla sencilla que me muestre el estado histórico de un AIB para poder calcular fácilmente el downtime. Ponderación: 10 (dificultad: 5, complejidad: 3, riesgo: 2).
 
-\item Como supervisor de producción, deseo recibir las notificaciones importantes en mi celular para tener mejor tiempo de respuesta, ya que no siempre estoy en la oficina. Ponderación: 16 (dificultad:8, complejidad:5, riesgo:3).
+\item Como supervisor de producción deseo recibir las notificaciones importantes en mi celular para tener mejor tiempo de respuesta, ya que no siempre estoy en la oficina. Ponderación: 16 (dificultad: 8, complejidad: 5, riesgo: 3).
 
-\item Como encargado de mantenimiento, quiero tener información frecuente del estado de carga de las baterías para programar eficientemente las tareas de las cuadrillas del sector. Ponderación: 6 (dificultad:2, complejidad:3, riesgo:1).
+\item Como encargado de mantenimiento quiero tener información frecuente del estado de carga de las baterías para programar eficientemente las tareas de las cuadrillas del sector. Ponderación: 6 (dificultad: 2, complejidad: 3, riesgo: 1).
 
-\item Como jefe de distrito, quiero que mis colaboradores optimicen sus salidas al campo para poder dedicar más tiempo a tareas analíticas en la oficina. Ponderación: 12 (dificultad:5, complejidad:5, riesgo:2).
+\item Como jefe de distrito quiero que mis colaboradores optimicen sus salidas al campo para poder dedicar más tiempo a tareas analíticas en la oficina. Ponderación: 12 (dificultad: 5, complejidad: 5, riesgo: 2).
 
-\item Como jefe de distrito, quiero minimizar el uso de las horas de cuadrilla para poder reducir costos operativos. Ponderación: 12 (dificultad:5, complejidad:5, riesgo:2).
+\item Como jefe de distrito quiero minimizar el uso de las horas de cuadrilla para poder reducir costos operativos. Ponderación: 12 (dificultad: 5, complejidad: 5, riesgo: 2).
 
-\item Como referente de TI, quiero que la aplicación solo la puedan utilizar usuarios autorizados para preservar la confidencialidad e integridad de los datos. Ponderación: 11 (dificultad:3, complejidad:5, riesgo:3).
+\item Como referente de TI quiero que la aplicación solo la puedan utilizar usuarios autorizados para preservar la confidencialidad e integridad de los datos. Ponderación: 11 (dificultad: 3, complejidad: 5, riesgo: 3).
 
-\item Como referente de TI, quiero democratizar el acceso a la información para que nuevos usuarios puedan aportar más valor a sus tareas. Ponderación: 12 (dificultad:5, complejidad:2, riesgo:5).
+\item Como referente de TI quiero democratizar el acceso a la información para que nuevos usuarios puedan aportar más valor a sus tareas. Ponderación: 12 (dificultad: 5, complejidad: 2, riesgo: 5).
 
-\item Como desarrollador de la aplicación, quiero armar un sistema flexible y escalable para incorporar nuevas funcionalidades en el futuro. Ponderación: 15 (dificultad:5, complejidad:5, riesgo:5).
+\item Como desarrollador de la aplicación quiero armar un sistema flexible y escalable para incorporar nuevas funcionalidades en el futuro. Ponderación: 15 (dificultad: 5, complejidad: 5, riesgo: 5).
 \end{itemize}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
+%\begin{consigna}{red}
 
-Los entregables del proyecto son (ejemplo):
+Los entregables del proyecto son:
 
 \begin{itemize}
-	\item Manual de uso
-	\item Diagrama de circuitos esquemáticos
-	\item Código fuente del firmware
-	\item Diagrama de instalación
-	\item Informe final
-	\item etc...
+	\item Diagrama esquemático del dispositivo de medición.
+	\item Manual de configuración e instalación del dispositivo de medición.
+	\item Documentación de configuración de componentes en Microsoft Azure.
+	\item Código fuente del software de usuario.
+	\item Manual de uso del software de usuario.
+	\item Informe de avance del proyecto.
+	\item Memoria final del proyecto.
 \end{itemize}
 
-\end{consigna}
+%\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Planificación de proyecto. (86 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Definición de la arquitectura de la solución. (8 hs)
+	\item Investigación de componentes principales del sistema. (40 hs)
+	\item Estimación de recursos necesarios y costos asociados. (8 hs)
+	\item Definiciones de alcances, requerimientos y presupuestos. (30 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item Desarrollo del dispositivo de medición. (130 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Análisis y definición de funcionalidades. (4 hs)
+	\item Selección de componentes. (18 hs)
+	\item Análisis y definición del procedimiento de montaje en el AIB. (20 hs)
+	\item Estudio, pruebas y definición de configuración del nodo LoRaWAN. (16 hs)
+	\item Análisis, pruebas y definición de transductores. (32 hs)
+	\item Integración y pruebas del conjunto nodo - transductores en AIB operativo. (40 hs)
 	\end{enumerate}
-\item Grupo de tareas 3
+\item Estructura de mensajes. (42 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\item Tarea 4 (tantas hs)
-	\item Tarea 5 (tantas hs)
+	\item Definición de jerarquía de tópicos. (18 hs)
+	\item Decodificación y escalado de carga útil. (24 hs)
 	\end{enumerate}
+	
+\item Desarrollo de componentes en la nube. (178 hs)
+	\begin{enumerate}
+	\item Despliegue y configuración del componente IoT Hub. (12 hs)
+	\item Despliegue y configuración de la base de datos. (24 hs)
+	\item Despliegue y configuración de funciones y flujo de notificaciones. (32 hs)
+	\item Despliegue y configuración de componentes para la aplicación del servidor. (40 hs)
+	\item Desarrollo de la interfaz de la aplicación de usuario. (40 hs)
+	\item Desarrollo de la interfaz para notificaciones por Telegram. (30 hs)
+	\end{enumerate}
+
+\item Pruebas de Integración del sistema. (30 hs)
+	\begin{enumerate}
+	\item Diseño y despliegue de pruebas de funcionalidad integral. (30 hs)
+	\end{enumerate}
+
+\item Documentación. (148 hs)
+	\begin{enumerate}
+	\item Elaboración del informe de avance del proyecto. (30 hs)
+	\item Elaboración del manual de configuración e instalación del dispositivo de medición. (24 hs)
+	\item Elaboración de la documentación de configuración de componentes en Microsoft Azure. (24 hs)
+	\item Elaboración del manual de uso del software de usuario. (24 hs)
+	\item Elaboración del informe final del proyecto. (40 hs)
+	\item Cierre del proyecto. (6 hs)
+	\end{enumerate}
+	
 \end{enumerate}
 
-Cantidad total de horas: (tantas hs)
+Cantidad total de horas: (614 hs)
 
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
 
-\end{consigna}
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
