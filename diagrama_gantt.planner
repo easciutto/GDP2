@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<project name="Sistema de monitoreo de un equipo de extraccion de petroleo" company="" manager="Eduardo A. Sciutto" phase="" project-start="20220621T000000Z" mrproject-version="2" calendar="1">
+  <properties/>
+  <phases/>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Jornada laboral" description="Un d&#xED;a de trabajo predeterminado"/>
+      <day-type id="1" name="Jornada de descanso" description="Un d&#xED;a de descanso predeterminado"/>
+      <day-type id="2" name="Usar base" description="Usar d&#xED;a del calendario base"/>
+    </day-types>
+    <calendar id="1" name="Predeterminado">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="1400" end="1630"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days/>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="Planificaci&#xF3;n de proyecto " note="" work="309600" start="20220621T000000Z" end="20220808T150000Z" work-start="20220621T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Definici&#xF3;n de arquitectura de la soluci&#xF3;n" note="" work="28800" start="20220621T000000Z" end="20220624T143000Z" work-start="20220621T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="3" name="Investigaci&#xF3;n de componentes principales del sistema" note="" work="144000" start="20220624T143000Z" end="20220718T143000Z" work-start="20220624T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="2" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="4" name="Estimaci&#xF3;n de recursos necesarios y costos asociados" note="" work="28800" start="20220718T143000Z" end="20220721T150000Z" work-start="20220718T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="3" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="5" name="Definiciones de alcances, requerimientos y presupuestos" note="" work="108000" start="20220721T150000Z" end="20220808T150000Z" work-start="20220721T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="4" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="6" name="Desarrollo del dispositivo de medici&#xF3;n " note="" work="468000" start="20220808T150000Z" end="20221006T143000Z" work-start="20220808T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="7" name="An&#xE1;lisis y definici&#xF3;n de funcionalidades" note="" work="14400" start="20220808T150000Z" end="20220809T163000Z" work-start="20220808T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="5" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="8" name="Selecci&#xF3;n de componentes" note="" work="64800" start="20220809T163000Z" end="20220819T143000Z" work-start="20220810T140000Z" percent-complete="0" priority="1" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="9" name="An&#xE1;lisis y definici&#xF3;n de procedimiento de montaje en AIB" note="" work="72000" start="20220819T143000Z" end="20220825T143000Z" work-start="20220819T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="8" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="10" name="Estudio, pruebas y definici&#xF3;n de configuraci&#xF3;n del nodo LoRaWAN" note="" work="57600" start="20220827T143000Z" end="20220901T143000Z" work-start="20220829T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="8" type="FS" lag="691200"/>
+        </predecessors>
+      </task>
+      <task id="11" name="An&#xE1;lisis, pruebas y definici&#xF3;n de transductores. " note="" work="115200" start="20220902T143000Z" end="20220912T153000Z" work-start="20220902T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="8" type="FS" lag="1209600"/>
+        </predecessors>
+      </task>
+      <task id="12" name="Integraci&#xF3;n y pruebas del conjunto nodo - transductores en AIB operativo" note="" work="144000" start="20220912T153000Z" end="20220922T153000Z" work-start="20220912T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="11" type="FS"/>
+          <predecessor id="1" predecessor-id="10" type="FS"/>
+          <predecessor id="1" predecessor-id="9" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="13" name="Dispositivo listo" note="Dispositivo listo" work="0" start="20221006T143000Z" end="20221006T143000Z" work-start="20221006T143000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="30" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="14" name="Estructura de mensajes " note="" work="151200" start="20221006T143000Z" end="20221028T163000Z" work-start="20221006T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="15" name="Definici&#xF3;n de jerarqu&#xED;a de t&#xF3;picos" note="" work="64800" start="20221006T143000Z" end="20221017T150000Z" work-start="20221006T143000Z" percent-complete="0" priority="1" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="30" type="FS"/>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="16" name="Decodificaci&#xF3;n y escalado de carga &#xFA;til" note="" work="86400" start="20221017T150000Z" end="20221028T163000Z" work-start="20221017T150000Z" percent-complete="0" priority="1" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="15" type="FS"/>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="17" name="Estructua de msg. lista" note="" work="0" start="20221028T163000Z" end="20221028T163000Z" work-start="20221028T163000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="16" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="18" name="Desarrollo de componentes en la nube " note="" work="640800" start="20221028T163000Z" end="20230116T143000Z" work-start="20221031T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="19" name="Despliegue y configuraci&#xF3;n de componente IoT Hub" note="" work="43200" start="20221028T163000Z" end="20221104T160000Z" work-start="20221031T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="16" type="FS"/>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="20" name="Despliegue y configuraci&#xF3;n de base de datos" note="" work="86400" start="20221104T160000Z" end="20221118T150000Z" work-start="20221104T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="19" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="21" name="Despliegue y configuraci&#xF3;n de funciones y flujo de notificaciones" note="" work="115200" start="20221118T150000Z" end="20221207T143000Z" work-start="20221118T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="20" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="22" name="Despliegue y configuraci&#xF3;n de componentes para aplicaci&#xF3;n de servidor" note="" work="144000" start="20221207T143000Z" end="20221219T143000Z" work-start="20221207T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="21" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="23" name="Desarrollo de la interfaz de la aplicaci&#xF3;n de usuario" note="" work="144000" start="20221219T143000Z" end="20221229T143000Z" work-start="20221219T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="22" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="24" name="Desarrollo de la interfaz para notificaciones por Telegram" note="" work="108000" start="20221229T143000Z" end="20230116T143000Z" work-start="20221229T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="23" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="25" name="Pruebas de Integraci&#xF3;n del sistema " note="" work="108000" start="20230210T150000Z" end="20230220T150000Z" work-start="20230210T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="26" name="Dise&#xF1;o y despliegue de pruebas de funcionalidad integral. " note="" work="108000" start="20230210T150000Z" end="20230220T150000Z" work-start="20230210T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="30" type="FS"/>
+          <predecessor id="1" predecessor-id="31" type="FS"/>
+          <predecessor id="1" predecessor-id="16" type="FS"/>
+          <predecessor id="1" predecessor-id="15" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="27" name="Integracion lista" note="" work="0" start="20230220T150000Z" end="20230220T150000Z" work-start="20230220T150000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="26" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="28" name="Documentaci&#xF3;n " note="" work="930600" start="20220922T153000Z" end="20230602T163000Z" work-start="20220922T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="29" name="Elaboraci&#xF3;n de informe de avance del proyecto" note="" work="108000" start="20230220T150000Z" end="20230308T150000Z" work-start="20230220T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="26" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="30" name="Elaboraci&#xF3;n de manual de configuraci&#xF3;n e instalaci&#xF3;n del dispositivo de medici&#xF3;n" note="" work="86400" start="20220922T153000Z" end="20221006T143000Z" work-start="20220922T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="12" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="31" name="Elaboraci&#xF3;n de documentaci&#xF3;n de configuraci&#xF3;n de componentes en Microsoft Azure" note="" work="86400" start="20230127T160000Z" end="20230210T150000Z" work-start="20230127T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="33" type="FS"/>
+          <predecessor id="1" predecessor-id="24" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="32" name="Nube implementada" note="" work="0" start="20230210T150000Z" end="20230210T150000Z" work-start="20230210T150000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="31" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="33" name="Elaboraci&#xF3;n de manual de uso del software de usuario" note="" work="86400" start="20230116T143000Z" end="20230127T160000Z" work-start="20230116T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="24" type="FS"/>
+          <predecessor id="1" predecessor-id="23" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="34" name="Elaboraci&#xF3;n de informe final del proyecto" note="" work="540000" start="20230308T150000Z" end="20230531T150000Z" work-start="20230308T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="29" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="35" name="Cierre del proyecto" note="" work="23400" start="20230531T150000Z" end="20230602T163000Z" work-start="20230531T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="34" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+  </tasks>
+  <resource-groups/>
+  <resources>
+    <resource id="1" name="Ejecutor" short-name="e" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource id="2" name="colaborador" short-name="c" type="1" units="0" email="" note="" std-rate="0"/>
+  </resources>
+  <allocations>
+    <allocation task-id="35" resource-id="1" units="100"/>
+    <allocation task-id="34" resource-id="1" units="100"/>
+    <allocation task-id="33" resource-id="1" units="100"/>
+    <allocation task-id="31" resource-id="1" units="100"/>
+    <allocation task-id="30" resource-id="1" units="100"/>
+    <allocation task-id="29" resource-id="1" units="100"/>
+    <allocation task-id="26" resource-id="1" units="100"/>
+    <allocation task-id="24" resource-id="1" units="100"/>
+    <allocation task-id="23" resource-id="1" units="100"/>
+    <allocation task-id="22" resource-id="1" units="100"/>
+    <allocation task-id="21" resource-id="1" units="100"/>
+    <allocation task-id="20" resource-id="1" units="100"/>
+    <allocation task-id="19" resource-id="1" units="100"/>
+    <allocation task-id="16" resource-id="1" units="100"/>
+    <allocation task-id="15" resource-id="1" units="100"/>
+    <allocation task-id="12" resource-id="1" units="100"/>
+    <allocation task-id="11" resource-id="1" units="100"/>
+    <allocation task-id="10" resource-id="1" units="100"/>
+    <allocation task-id="9" resource-id="1" units="100"/>
+    <allocation task-id="8" resource-id="1" units="100"/>
+    <allocation task-id="7" resource-id="1" units="100"/>
+    <allocation task-id="5" resource-id="1" units="100"/>
+    <allocation task-id="4" resource-id="1" units="100"/>
+    <allocation task-id="3" resource-id="1" units="100"/>
+    <allocation task-id="2" resource-id="1" units="100"/>
+    <allocation task-id="26" resource-id="2" units="100"/>
+    <allocation task-id="23" resource-id="2" units="100"/>
+    <allocation task-id="22" resource-id="2" units="100"/>
+    <allocation task-id="12" resource-id="2" units="100"/>
+    <allocation task-id="11" resource-id="2" units="100"/>
+    <allocation task-id="10" resource-id="2" units="100"/>
+    <allocation task-id="9" resource-id="2" units="100"/>
+  </allocations>
+</project>

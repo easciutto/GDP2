@@ -72,6 +72,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1      & Se completa hasta el punto 5 inclusive                 & 2 de julio de 2022 \\ \hline
 2      & Se completa hasta el punto 9 inclusive					& 9 de julio de 2022 \\
 \hline
+3      & Se completa hasta el punto 12 inclusive				& 17 de julio de 2022 \\
+\hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -93,7 +95,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un sistema de monitoreo de un equipo de extracción de petróleo, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y ARS 650.000,00, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un sistema de monitoreo de un equipo de extracción de petróleo, y tendrá un presupuesto preliminar estimado de 614 hs de trabajo y ARS 2.162.300,00, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -140,7 +142,7 @@ En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistem
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.8\textwidth]{./Figuras/diagrama_bloques_conceptual2.png}
-\caption{Diagrama en bloques del sistema}
+\caption{Diagrama en bloques del sistema.}
 \label{fig:diagBloques}
 \end{figure}
 
@@ -412,97 +414,103 @@ Cantidad total de horas: (614 hs)
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
-
 %La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
 
 %\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
+El diagrama AON correspondiente a todas las etapas del proyecto se muestran en la figura \ref{fig:AoN}. La unidad de tiempo se encuentra definida en horas.
+El proyecto se inicia el 21 de junio de 2022 y finaliza el 2 de junio de 2023.
+El camino crítico tiene una duración de 398 horas y se resalta en color rojo.
+En las referencias se identifican los colores de cada etapa del proyecto. 
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
-\caption{Diagrama en \textit{Activity on Node}}
+\includegraphics[width=1\textwidth]{./Figuras/Diagrama Activity on node_seleccion.pdf}
+\caption{Diagrama en \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
-
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
 
 
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
+%\begin{consigna}{red}
+%
+%Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre los cuales destacamos:
+%
+%\begin{itemize}
+%\item Planner
+%\item GanttProject
+%\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
+%\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
+%\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
+%\end{itemize}
 
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre los cuales destacamos:
+%Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
+%Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
+%
+%Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
+%Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
+%Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
 
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
+%En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
+%
+%\begin{figure}[htbp]
+%\begin{center}
+%\begin{ganttchart}{1}{12}
+%  \gantttitle{2020}{12} \\
+%  \gantttitlelist{1,...,12}{1} \\
+%  \ganttgroup{Group 1}{1}{7} \\
+%  \ganttbar{Task 1}{1}{2} \\
+%  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
+%  \ganttmilestone{Milestone o hito}{7} \ganttnewline
+%  \ganttbar{Final Task}{8}{12}
+%  \ganttlink{elem2}{elem3}
+%  \ganttlink{elem3}{elem4}
+%\end{ganttchart}
+%\end{center}
+%\caption{Diagrama de gantt de ejemplo}
+%\label{fig:gantt}
+%\end{figure}
 
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
+En la figura \ref{fig:diagWBS} se aprecia la tabla del desglose de actividades con sus fechas de inicio y fin, duración y asignación de recursos. Se identifican solo 2 recursos, el principal es el ejecutor (e) y el secundario es el colaborador (c).
 
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
+En la figura \ref{fig:diagGantt} se muestra el diagrama de Gantt. Para la elaboración del mismo, se tomó una jornada de trabajo de 2,5 horas diarias, lo cual distribuye las 614 horas del proyecto en 346 días corridos. Se asume un esfuerzo continuo desde el inicio hasta el fin del proyecto, dedicándole los últimos dos meses exclusivamente a la elaboración de la memoria final.
 
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
-\label{fig:gantt}
+En la sección anterior se realizó un diagrama AON donde se identificaron tareas que podían realizarse de forma simultánea y se determinó un camino crítico. La realidad es que al ser el ejecutor un único recurso, las tareas debieron reacomodarse de forma secuencial para reflejar ésta situación más realista.
+%\begin{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[height=.8\textheight]{./Figuras/wbs.png}
+\caption{Desglose de actividades.}
+\label{fig:diagWBS}
 \end{figure}
 
+%\end{landscape}
 
 \begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt rotado}
+\includegraphics[height=.9\textheight]{./Figuras/Gantt.png}
+\caption{Diagrama de Gantt.}
 \label{fig:diagGantt}
 \end{figure}
 
 \end{landscape}
 
-\end{consigna}
+%\end{consigna}
 
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
 
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
+El presupuesto se expresa en pesos argentinos, tomando como referencia la fecha de inicio del proyecto.
 
-\end{consigna}
+Los costos directos mayormente lo conforman el valor de las horas de ejecución de las tareas detalladas.
+
+Como estimación de los costos indirectos se considera un 40\% del total de costos directos. Forman parte de éstos licencias de software utilizadas, costos de servicios de comunicaciones, acceso a recursos informáticos de uso compartido, servicios de mantenimiento  mensual, gastos de transporte dentro del yacimiento y alquileres de oficinas y mobiliario.
+
 
 \begin{table}[htpb]
 \centering
@@ -515,24 +523,32 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
+ Horas de desarrollo de ejecutor &
+  
+  \multicolumn{1}{c|}{614 h} &
+  \multicolumn{1}{r|}{\$ 1500} &
+  \multicolumn{1}{r|}{\$ 921.000} \\ \hline
+ Horas de soporte de colaborador &
+  \multicolumn{1}{c|}{109 h} &
+  \multicolumn{1}{r|}{\$ 1500} &
+  \multicolumn{1}{r|}{\$ 163.500} \\ \hline
+\multicolumn{1}{|l|}{Cuadrilla de montaje en AIB} 
+	& {16 h}
+   & \multicolumn{1}{r|}{\$ 6.250}
+   & \multicolumn{1}{r|}{\$ 100.000}
    \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
+\multicolumn{1}{|l|}{Materiales: nodo, transductores y mat. menores} 
+	& {1 u}
+   & \multicolumn{1}{r|}{\$ 300.000}
+   & \multicolumn{1}{r|}{\$ 300.000}
+   \\ \hline
+\multicolumn{1}{|l|}{Suscripción mensual de grupo recursos en Azure} 
+	& {12 m}
+   & \multicolumn{1}{r|}{\$ 5.000}
+   & \multicolumn{1}{r|}{\$ 60.000}
    \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{r|}{\$ 1.544.500} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -540,109 +556,292 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+%\multicolumn{1}{|l|}{} &
+40\% de los costos directos
+   & {1 u}
+   & {\$ 617.800}
+   & {\$ 617.800}
+   \\ 
+   \hline
+%\multicolumn{1}{|l|}{} &
+%   &
+%   &
+%   \\ \hline
+%\multicolumn{1}{|l|}{} &
+%   &
+%   &
+%   \\ \hline
+%\multicolumn{3}{|c|}{SUBTOTAL} &
+% \multicolumn{1}{c|}{} \\ \hline
 \rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
+\multicolumn{3}{|c|}{TOTAL} & \textbf{\$ 2.162.300}
    \\ \hline
 \end{tabularx}%
 \end{table}
 
-
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
+
+a) Identificación de los riesgos y estimación de sus consecuencias:
  
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
+Riesgo 1: Pérdida o sabotaje del dispositivo de medición.
 \begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
+	\item Severidad (7): Generaría retrasos en el cronograma de implementación, ya que se deberían adquirir nuevamente los componentes y coordinar las tareas de montaje con cuadrillas operativas muy demandadas en el yacimiento.
+	\item Probabilidad de ocurrencia (6): La pérdida por robo tiene una probabilidad cierta de ocurrencia, ya que el lugar seleccionado para la implementación del prototipo es un yacimiento de periferia con poca presencia de personas y bajo nivel de vigilancia.
 \end{itemize}   
 
-Riesgo 2:
+Riesgo 2: Falla de funcionamiento del dispositivo de medición al no soportar condiciones ambientales de operación.
 \begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
+	\item Severidad (9): El dispositivo debe soportar condiciones climáticas extremas, altas vibraciones producidas por el sistema de bombeo mecánico y manipulación involuntaria en tareas de mantenimiento del equipamiento primario. Una falla de funcionamiento atribuida a estas causas, implicaría realizar un re diseño que pondría en riesgo la ejecución del proyecto. 
+	\item Ocurrencia (3): Los componentes seleccionados cumplen exigentes condiciones ambientales, de todas maneras se identifica una probabilidad de falla ante la frecuente manipulación a la que pudieran estar expuestos.
 \end{itemize}
 
-Riesgo 3:
+Riesgo 3: Retraso en la asignación de recursos para el montaje del dispositivo de medición.
 \begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
+	\item Severidad (4): Al igual que el riesgo 1, se generarían retrasos en el cronograma de implementación, comprometiendo los plazos acordados con el cliente.
+	\item Ocurrencia (4): Existen situaciones imprevistas algo frecuentes que generan tareas de mayor prioridad para las cuadrillas de mantenimiento en el yacimiento.
 \end{itemize}
 
+Riesgo 4: No contar con el conocimiento necesario para desarrollar la aplicación de servidor e interfaz de usuario.
+\begin{itemize}
+	\item Severidad (7): No se dispone del conocimiento total requerido para su desarrollo en ésta instancia del proyecto. Adquirirlos tardíamente podría demorar la ejecución del proyecto.
+	\item Ocurrencia (3):Se contará con apoyo de un colaborador con mayor experiencia y los contenidos requeridos se asume que serán vistos en las materias de la especialización, por lo cual su probabilidad de ocurrencia es baja.
+\end{itemize}
+
+Riesgo 5: Cambio de proveedor de plataforma en la nube.
+\begin{itemize}
+	\item Severidad (8): Se debería adaptar la arquitectura y configuración de los componentes desarrollados para utilizarlos con las herramientas de otro proveedor. Tiene impacto en el costo de desarrollo y tiempo de implementación.
+	\item Ocurrencia (1):Probabilidad baja, dado que existe relación comercial muy fuerte con el proveedor.
+\end{itemize}
+
+Riesgo 6: Cambio en la forma de facturación de los servicios consumidos en la nube.
+\begin{itemize}
+	\item Severidad (5): Podrían incrementarse los costos mensuales asumidos, afectando el presupuesto establecido.
+	\item Ocurrencia (2):Probabilidad baja. Se contempla tener alternativas de implementación de los componentes o integración con otros grupos de recursos a fin de mantener los costos dentro de los límites establecidos.
+\end{itemize}
+
+
+Riesgo 7: Pérdida o daño de material de documentación.
+\begin{itemize}
+	\item Severidad (7): Afectaría los plazos de ejecución del proyecto, dado que se debería destinar tiempo adicional a su re elaboración.
+	\item Ocurrencia (1): la notebook utilizada para su elaboración es de uso compartido para otras tareas laborales. Por ello, se utilizará un repositorio github y una rutina recurrente de actualización para minimizar el riesgo de ocurrencia.
+\end{itemize}
 
 b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 
 \begin{table}[htpb]
+\definecolor{miverde}{RGB}{118,215,196}
+\definecolor{mirojo}{RGB}{214,148,138}
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+1. Pérdida o sabotaje del disp. de medición            & 7  & 6  & \cellcolor{mirojo}{42}    & 4 & 3 & \cellcolor{miverde}{12} \\ \hline
+2. Falla de funcionamiento del disp. de medición       & 9  & 3  & \cellcolor{mirojo}{27}    & 7 & 1 & \cellcolor{miverde}{7}  \\ \hline
+3. Retraso en la asignación de recursos para el montaje& 4  & 4  & \cellcolor{miverde}{16}   &  -  &  - &  -    \\ \hline
+4. No contar con el conocimiento necesario             & 7  & 3  & \cellcolor{mirojo}{21}    & 3 & 3 & \cellcolor{miverde}{9}   \\ \hline
+5. Cambio de proveedor de plataforma en la nube        & 8  & 1  & \cellcolor{miverde}{8}   &  -  &  -  & -     \\ \hline
+6. Cambio en la forma de facturación de los servicios  & 5  & 2  & \cellcolor{miverde}{10}    & -   &  -  &  -  \\ \hline
+7. Pérdida o daño de material de documentación         & 7  & 1  & \cellcolor{miverde}{7}   &  -  &  -  &  -    \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 20
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+Riesgo 1: Se dispondrá de un stock de al menos 3 unidades adicionales para contemplar reemplazos. Se notificará al sector de seguridad física de la empresa operadora de la realización del piloto, a fin de que se pueda instrumentar una rutina de vigilancia adicional.\\
+Nueva asignación de S y O, con su respectiva justificación:
+\begin{itemize}
+	\item Severidad (4): Se reduce a un valor que contempla solo el retraso por la tarea de reinstalar el dispositivo.
+	\item Ocurrencia (3): Se reduce la probabilidad al aumentar la disuasión por el incremento en la vigilancia.
+\end{itemize}
  
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
+Riesgo 2: Se supervisará el montaje del dispositivo de medición, de modo de evitar vicios de instalación. Se brindará charla de capacitación a las cuadrillas de mantenimiento al momento de realizar el montaje para evitar la incorrecta manipulación del dispositivo. Se realizará al menos una visita mensual para evaluar el estado de la instalación.\\
+Nueva asignación de S y O, con su respectiva justificación:
+\begin{itemize}
+	\item Severidad (7): Con las medidas a adoptar, se tendrá un alerta temprana de alguna deficiencia en las prestaciones del dispositivo.
+	\item Ocurrencia (1): Mitigando el factor humano de un mal uso o mala instalación, la probabilidad de falla se deberá únicamente a defectos de los componentes.
+\end{itemize}
+ 
+Riesgo 4: Al detectar el riesgo de desvío por demoras en la ejecución de tareas relacionadas a esta área de conocimiento, se solicitará asistencia de colaborador especialista. Se acordará previamente con la gerencia funcional del colaborador su afectación potencial al proyecto en un período específico de tiempo.\\
+  Nueva asignación de S y O, con su respectiva justificación:
+\begin{itemize}
+	\item Severidad (3): Se reduce al contar con mayor respaldo para comenzar la tarea en el tiempo planificado.
+	\item Ocurrencia (3): No se modifica.
+\end{itemize}
+ 
 
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Para cada uno de los requerimientos del proyecto indique:
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento.
+Se presentan a continuación los requerimientos con sus verificaciones y validaciones.
 
-\begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
-\end{itemize}
+%\begin{itemize} 
+%\item Req \#1: copiar acá el requerimiento.
+%
+%\begin{itemize}
+%	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
+%	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+%\end{itemize}
 
-\end{itemize}
+%\end{itemize}
+%
+%Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
+\begin{enumerate}
+	\item Requerimientos asociados al dispositivo de medición.
+		\begin{enumerate}
+			\item No debe requerir mano de obra calificada, tanto para la instalación como para la operación cotidiana.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
 
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
+			\item Debe ser robusto y soportar condiciones de clima extremo (grado de protección IP 67, soportar temperaturas entre -20°C y 50°C).
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Debe funcionar con baterías internas y poseer una autonomía de al menos 3 años.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item La batería debe ser comercialmente asequible y de fácil reemplazo.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item El estado e información de los sensores del dispositivo se deben poder consultar mediante una aplicación inalámbrica desde un celular y de forma sencilla.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Debe permitir el traslado a una nueva ubicación sin requerir una reconfiguración local.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Debe detectar y notificar de forma inmediata si un sensor tiene una falla de cableado.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+		\end{enumerate}
+		
+	\item Requerimientos asociados a la colecta e identificación de mensajes generados por los dispositivos.
+		\begin{enumerate}
+			\item Se deberá definir un nomenclador de tópicos que sea flexible y escalable.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item La estructura de la carga útil del mensaje debe soportar futuras  incorporaciones de sensores.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+		\end{enumerate}
 
-\end{consigna}
+	\item Requerimientos asociados al software en la nube.
+		\begin{enumerate}
+			\item Se deberán utilizar componentes de la plataforma Azure de Microsoft.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Los mensajes de los dispositivos se enviarán a un componente IoT Hub mediante protocolo AMQP.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Se deberá decodificar y enrutar adecuadamente el flujo de datos proveniente de IoT Hub.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Se debe establecer un flujo de datos hacia una base de datos de históricos.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Se debe establecer un flujo de datos para procesar y enviar notificaciones de alarmas.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Se deberá definir un mecanismo de notificación de alarmas y eventos a los usuarios registrados. Podrá ser por email y/o Telegram.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item La aplicación web dispondrá de un panel para visualizar información histórica de cada dispositivo.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item La aplicación web permitirá la consulta de eventos y alarmas. Se debe recibir una notificación de forma inmediata ante un paro del motor.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Se deben recibir notificaciones de advertencia de nivel de batería bajo y algún otro parámetro que se identifique de utilidad, para realizar un correcto mantenimiento preventivo.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+		\end{enumerate}
+
+	\item Requerimientos de integridad y seguridad.
+		\begin{enumerate}
+			\item Se deberá establecer un mecanismo seguro de gestión y validación de usuarios de la aplicación web.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item El acceso a la configuración de los dispositivos de medición estará protegido por un usuario y contraseña. Será utilizado únicamente por personal autorizado del sector TI de la empresa.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+		\end{enumerate}
+	
+	\item Requerimientos de documentación.
+		\begin{enumerate}
+			\item Se deberá elaborar el manual de configuración e instalación del dispositivo de medición.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}			
+			\item Se deberá documentar la configuración de todos los componentes desplegados en Microsoft Azure.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Se deberá elaborar el manual de uso del software de usuario.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Se deberá desarrollar el informe de avance del proyecto.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+			\item Se deberá desarrollar la memoria final del proyecto.
+			\begin{itemize}
+				\item Verificación:
+				\item Validación: 
+			\end{itemize}
+		\end{enumerate}
+		
+	\end{enumerate}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
