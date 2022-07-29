@@ -74,6 +74,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 \hline
 3      & Se completa hasta el punto 12 inclusive				& 17 de julio de 2022 \\
 \hline
+4     & Se completa hasta el punto 15 inclusive				& 29 de julio de 2022 \\
+\hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -593,7 +595,7 @@ Riesgo 1: Pérdida o sabotaje del dispositivo de medición.
 
 Riesgo 2: Falla de funcionamiento del dispositivo de medición al no soportar condiciones ambientales de operación.
 \begin{itemize}
-	\item Severidad (9): El dispositivo debe soportar condiciones climáticas extremas, altas vibraciones producidas por el sistema de bombeo mecánico y manipulación involuntaria en tareas de mantenimiento del equipamiento primario. Una falla de funcionamiento atribuida a estas causas, implicaría realizar un re diseño que pondría en riesgo la ejecución del proyecto. 
+	\item Severidad (9): El dispositivo debe soportar condiciones climáticas extremas, altas vibraciones producidas por el sistema de bombeo mecánico y manipulación involuntaria en tareas de mantenimiento del equipamiento primario. Una falla de funcionamiento atribuida a estas causas, implicaría realizar un rediseño que pondría en riesgo la ejecución del proyecto. 
 	\item Ocurrencia (3): Los componentes seleccionados cumplen exigentes condiciones ambientales, de todas maneras se identifica una probabilidad de falla ante la frecuente manipulación a la que pudieran estar expuestos.
 \end{itemize}
 
@@ -699,39 +701,39 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 		\begin{enumerate}
 			\item No debe requerir mano de obra calificada, tanto para la instalación como para la operación cotidiana.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificarán las instrucciones de montaje y operación.
+				\item Validación: se supervisará la primera instalación del prototipo y la operación por un usuario designado.
 			\end{itemize}
 
 			\item Debe ser robusto y soportar condiciones de clima extremo (grado de protección IP 67, soportar temperaturas entre -20°C y 50°C).
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificarán los requisitos en las hojas de datos de los componentes.
+				\item Validación: se inspeccionará la primera instalación del prototipo.
 			\end{itemize}
 			\item Debe funcionar con baterías internas y poseer una autonomía de al menos 3 años.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación:se verificará la especificación de la batería del nodo y se realizará un cálculo de autonomía en función del caso de uso típico.
+				\item Validación: se registrará un test de nivel de carga de batería en un intervalo de tiempo adecuado. 
 			\end{itemize}
 			\item La batería debe ser comercialmente asequible y de fácil reemplazo.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará esta característica en función de lo relevado en el mercado.
+				\item Validación: se ofrecerá evidencia al cliente de las posibilidades de  asequibilidad en el mercado.  
 			\end{itemize}
 			\item El estado e información de los sensores del dispositivo se deben poder consultar mediante una aplicación inalámbrica desde un celular y de forma sencilla.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará esta funcionalidad en las hojas de datos del nodo.
+				\item Validación: se ofrecerá realizar una prueba funcional al cliente.
 			\end{itemize}
 			\item Debe permitir el traslado a una nueva ubicación sin requerir una reconfiguración local.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: funcionalidad propia de la tecnología de conexión seleccionada. No requiere una verificación explícita.
+				\item Validación: se ofrecerá realizar una prueba funcional al cliente.
 			\end{itemize}
 			\item Debe detectar y notificar de forma inmediata si un sensor tiene una falla de cableado.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará el comportamiento del nodo al presentarse una condición de lazo abierto.
+				\item Validación: se ofrecerá realizar una prueba funcional al cliente.
 			\end{itemize}
 		\end{enumerate}
 		
@@ -739,13 +741,13 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 		\begin{enumerate}
 			\item Se deberá definir un nomenclador de tópicos que sea flexible y escalable.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se revisará la forma de asignación de tópicos, planteando situaciones extremas.
+				\item Validación: se realizará una prueba de definición de tópicos par distintos casos reales.
 			\end{itemize}
 			\item La estructura de la carga útil del mensaje debe soportar futuras  incorporaciones de sensores.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará la capacidad de incorporar nuevas variables a la carga útil del mensaje.
+				\item Validación: se realizará prueba de modificación de carga útil y su correspondiente representación.
 			\end{itemize}
 		\end{enumerate}
 
@@ -753,48 +755,48 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 		\begin{enumerate}
 			\item Se deberán utilizar componentes de la plataforma Azure de Microsoft.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: Se documentarán las características de cada componente de nube utilizado.
+				\item Validación: no es requerida por el cliente.
 			\end{itemize}
 			\item Los mensajes de los dispositivos se enviarán a un componente IoT Hub mediante protocolo AMQP.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se tomarán muestras testigo de mensajes enviados.
+				\item Validación: no es requerida por el cliente.
 			\end{itemize}
 			\item Se deberá decodificar y enrutar adecuadamente el flujo de datos proveniente de IoT Hub.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se tomarán muestras testigo de mensajes enviados.
+				\item Validación: no es requerida por el cliente.
 			\end{itemize}
 			\item Se debe establecer un flujo de datos hacia una base de datos de históricos.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se harán consultas de prueba para verificar el correcto almacenamiento de información histórica.
+				\item Validación: se dará acceso al cliente para verificar el almacenamiento de la información.
 			\end{itemize}
 			\item Se debe establecer un flujo de datos para procesar y enviar notificaciones de alarmas.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará el establecimiento del flujo de datos.
+				\item Validación: se realizará prueba de envío de notificaciones.
 			\end{itemize}
 			\item Se deberá definir un mecanismo de notificación de alarmas y eventos a los usuarios registrados. Podrá ser por email y/o Telegram.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará el establecimiento del flujo de datos.
+				\item Validación: se realizará prueba de envío de notificaciones.
 			\end{itemize}
 			\item La aplicación web dispondrá de un panel para visualizar información histórica de cada dispositivo.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará el acceso a la funcionalidad.
+				\item Validación: se dará acceso al cliente para validar el panel de visualización de información histórica. 
 			\end{itemize}
 			\item La aplicación web permitirá la consulta de eventos y alarmas. Se debe recibir una notificación de forma inmediata ante un paro del motor.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará la correcta activación de la notificación ante el evento de disparo.
+				\item Validación: se realizará prueba de funcionalidad simulada con el cliente.
 			\end{itemize}
 			\item Se deben recibir notificaciones de advertencia de nivel de batería bajo y algún otro parámetro que se identifique de utilidad, para realizar un correcto mantenimiento preventivo.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará la correcta notificación ante el evento de nivel de batería bajo.
+				\item Validación: se realizará prueba de funcionalidad simulada con el cliente.
 			\end{itemize}
 		\end{enumerate}
 
@@ -802,13 +804,13 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 		\begin{enumerate}
 			\item Se deberá establecer un mecanismo seguro de gestión y validación de usuarios de la aplicación web.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará la funcionalidad de gestión y validación de usuarios de la aplicación web.
+				\item Validación: se realizará demostración de uso de la aplicación web al cliente.
 			\end{itemize}
 			\item El acceso a la configuración de los dispositivos de medición estará protegido por un usuario y contraseña. Será utilizado únicamente por personal autorizado del sector TI de la empresa.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará el proceso de alta del nodo en la red LoRaWAN
+				\item Validación: no es requerida por el cliente.
 			\end{itemize}
 		\end{enumerate}
 	
@@ -816,28 +818,28 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 		\begin{enumerate}
 			\item Se deberá elaborar el manual de configuración e instalación del dispositivo de medición.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará que la la estructura y contenido sea el requerido. 
+				\item Validación: se plantearán versiones preliminares a ser validadas por el cliente.
 			\end{itemize}			
 			\item Se deberá documentar la configuración de todos los componentes desplegados en Microsoft Azure.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará que la la estructura y contenido sea el requerido. 
+				\item Validación: se enviará al área de IT el entregable para su validación.
 			\end{itemize}
 			\item Se deberá elaborar el manual de uso del software de usuario.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se verificará que la la estructura y contenido sea el requerido.
+				\item Validación: se plantearán versiones preliminares a ser validadas por el cliente.
 			\end{itemize}
 			\item Se deberá desarrollar el informe de avance del proyecto.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: se generará progresivamente la documentación técnica de cada etapa del proyecto y se cumplirán los procesos requeridos para disponer del informe de avance conformado previo a la entrega.
+				\item Validación: lectura, recepción de correcciones y sugerencias por parte del director del proyecto
 			\end{itemize}
 			\item Se deberá desarrollar la memoria final del proyecto.
 			\begin{itemize}
-				\item Verificación:
-				\item Validación: 
+				\item Verificación: cierre de la documentación técnica de cada etapa del proyecto. 
+				\item Validación: lectura, recepción de correcciones y sugerencias por parte del director del proyecto. Aprobación del taller de trabajo final.
 			\end{itemize}
 		\end{enumerate}
 		
@@ -846,19 +848,43 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
 
+Enmarcado en el proceso de cierre del proyecto se realizará una reunión formal de evaluación. La organización y conducción estará a cargo del responsable del proyecto. Deberán participar: el cliente, el impulsor y el orientador; quienes tendrán que registrar su evaluación a cada tema presentado. Podrán participar de forma opcional un representante de usuario final y los colaboradores.\\
+A continuación, se detallan las actividades que se llevarán a cabo.
 \begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-	  - Indicar esto y quién financiará los gastos correspondientes.
+	\item Evaluación del cumplimiento de las expectativas.
+	\begin{enumerate}
+		\item Se evaluará el grado de satisfacción del cliente con el resultado final del proyecto.
+		\item Se evaluará el grado de cumplimiento de cada requerimiento.
+		\item Se evaluará la ejecución del plan de trabajo, identificando si el mismo se cumplió dentro de los plazos establecidos. Si se identificaran desvíos, los mismos serán analizados en mayor detalle, para capturar oportunidades de mejora para nuevos proyectos.
+		\item Se evaluará el grado de cumplimiento de la ejecución del presupuesto.  De manera análoga al punto anterior, si hubiera desvíos respecto al plan los mismos serán analizados y registrados.
+		\item Se evaluará el grado de satisfacción con el cual los riesgos identificados originalmente (o no) fueron tratados en el proyecto.
+	\end{enumerate}
+	
+	\item Finalización de la prestación de servicios.
+	\begin{enumerate}
+		\item Se dará cierre formal a las prestaciones de servicio y a la utilización de activos de la empresa que fueron reservados para la ejecución del proyecto.
+	\end{enumerate}
+
+	\item Archivo de la documentación del proyecto.
+	\begin{enumerate}
+		\item Se aprobará la documentación del proyecto, incluyendo las lecciones aprendidas. Se archivará en el repositorio oficial de la oficina de proyectos.
+	\end{enumerate}
+
+	\item Agradecimientos.
+	\begin{enumerate}
+		\item Se identificará y dará un reconocimiento a todos los participantes del proyecto, realizando una mención especial a quienes hayan tenido un rol protagónico o destacado. Se gestionará la publicación de un \textit{flyer} (volante digital) en la página principal de la intranet de la empresa, dando lugar a éste reconocimiento.
+	\end{enumerate}
+
+
 \end{itemize}
 
-\end{consigna}
+% Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
+%	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
+%	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:
+%	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
+%	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
+%	  - Indicar esto y quién financiará los gastos correspondientes.
 
 
 \end{document}
