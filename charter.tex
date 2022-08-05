@@ -76,6 +76,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 \hline
 4     & Se completa hasta el punto 15 inclusive				& 29 de julio de 2022 \\
 \hline
+5     & Se completa el plan				& 4 de agosto de 2022 \\
+\hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -607,14 +609,14 @@ Riesgo 3: Retraso en la asignación de recursos para el montaje del dispositivo 
 
 Riesgo 4: No contar con el conocimiento necesario para desarrollar la aplicación de servidor e interfaz de usuario.
 \begin{itemize}
-	\item Severidad (7): No se dispone del conocimiento total requerido para su desarrollo en ésta instancia del proyecto. Adquirirlos tardíamente podría demorar la ejecución del proyecto.
-	\item Ocurrencia (3):Se contará con apoyo de un colaborador con mayor experiencia y los contenidos requeridos se asume que serán vistos en las materias de la especialización, por lo cual su probabilidad de ocurrencia es baja.
+	\item Severidad (7): No se dispone del conocimiento total requerido para su desarrollo en esta instancia del proyecto. Adquirirlos tardíamente podría demorar la ejecución del proyecto.
+	\item Ocurrencia (3): Se contará con apoyo de un colaborador con mayor experiencia y los contenidos requeridos se asume que serán vistos en las materias de la especialización, por lo cual su probabilidad de ocurrencia es baja.
 \end{itemize}
 
 Riesgo 5: Cambio de proveedor de plataforma en la nube.
 \begin{itemize}
 	\item Severidad (8): Se debería adaptar la arquitectura y configuración de los componentes desarrollados para utilizarlos con las herramientas de otro proveedor. Tiene impacto en el costo de desarrollo y tiempo de implementación.
-	\item Ocurrencia (1):Probabilidad baja, dado que existe relación comercial muy fuerte con el proveedor.
+	\item Ocurrencia (1): Probabilidad baja, dado que existe relación comercial muy fuerte con el proveedor.
 \end{itemize}
 
 Riesgo 6: Cambio en la forma de facturación de los servicios consumidos en la nube.
@@ -626,11 +628,11 @@ Riesgo 6: Cambio en la forma de facturación de los servicios consumidos en la n
 
 Riesgo 7: Pérdida o daño de material de documentación.
 \begin{itemize}
-	\item Severidad (7): Afectaría los plazos de ejecución del proyecto, dado que se debería destinar tiempo adicional a su re elaboración.
-	\item Ocurrencia (1): la notebook utilizada para su elaboración es de uso compartido para otras tareas laborales. Por ello, se utilizará un repositorio github y una rutina recurrente de actualización para minimizar el riesgo de ocurrencia.
+	\item Severidad (7): Afectaría los plazos de ejecución del proyecto, dado que se debería destinar tiempo adicional a su reelaboración.
+	\item Ocurrencia (1): la notebook utilizada para su elaboración es de uso compartido para otras tareas laborales. Por ello, se utilizará un repositorio Git Hub y una rutina recurrente de actualización para minimizar el riesgo de ocurrencia.
 \end{itemize}
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN = S x O)
 
 \begin{table}[htpb]
 \definecolor{miverde}{RGB}{118,215,196}
@@ -664,7 +666,7 @@ Nueva asignación de S y O, con su respectiva justificación:
 	\item Ocurrencia (3): Se reduce la probabilidad al aumentar la disuasión por el incremento en la vigilancia.
 \end{itemize}
  
-Riesgo 2: Se supervisará el montaje del dispositivo de medición, de modo de evitar vicios de instalación. Se brindará charla de capacitación a las cuadrillas de mantenimiento al momento de realizar el montaje para evitar la incorrecta manipulación del dispositivo. Se realizará al menos una visita mensual para evaluar el estado de la instalación.\\
+Riesgo 2: Se supervisará el montaje del dispositivo de medición, de modo de evitar vicios de instalación. Se brindarán charlas de capacitación a las cuadrillas de mantenimiento al momento de realizar el montaje para evitar la incorrecta manipulación del dispositivo. Se realizará al menos una visita mensual para evaluar el estado de la instalación.\\
 Nueva asignación de S y O, con su respectiva justificación:
 \begin{itemize}
 	\item Severidad (7): Con las medidas a adoptar, se tendrá un alerta temprana de alguna deficiencia en las prestaciones del dispositivo.
@@ -701,28 +703,28 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 		\begin{enumerate}
 			\item No debe requerir mano de obra calificada, tanto para la instalación como para la operación cotidiana.
 			\begin{itemize}
-				\item Verificación: se verificarán las instrucciones de montaje y operación.
+				\item Verificación: se comprobarán las instrucciones de montaje y operación.
 				\item Validación: se supervisará la primera instalación del prototipo y la operación por un usuario designado.
 			\end{itemize}
 
 			\item Debe ser robusto y soportar condiciones de clima extremo (grado de protección IP 67, soportar temperaturas entre -20°C y 50°C).
 			\begin{itemize}
-				\item Verificación: se verificarán los requisitos en las hojas de datos de los componentes.
+				\item Verificación: se comprobarán los requisitos en las hojas de datos de los componentes.
 				\item Validación: se inspeccionará la primera instalación del prototipo.
 			\end{itemize}
 			\item Debe funcionar con baterías internas y poseer una autonomía de al menos 3 años.
 			\begin{itemize}
-				\item Verificación:se verificará la especificación de la batería del nodo y se realizará un cálculo de autonomía en función del caso de uso típico.
+				\item Verificación: se comprobará la especificación de la batería del nodo y se realizará un cálculo de autonomía en función del caso de uso típico.
 				\item Validación: se registrará un test de nivel de carga de batería en un intervalo de tiempo adecuado. 
 			\end{itemize}
 			\item La batería debe ser comercialmente asequible y de fácil reemplazo.
 			\begin{itemize}
-				\item Verificación: se verificará esta característica en función de lo relevado en el mercado.
+				\item Verificación: se inspeccionará esta característica en función de lo relevado en el mercado.
 				\item Validación: se ofrecerá evidencia al cliente de las posibilidades de  asequibilidad en el mercado.  
 			\end{itemize}
 			\item El estado e información de los sensores del dispositivo se deben poder consultar mediante una aplicación inalámbrica desde un celular y de forma sencilla.
 			\begin{itemize}
-				\item Verificación: se verificará esta funcionalidad en las hojas de datos del nodo.
+				\item Verificación: se comprobará esta funcionalidad en las hojas de datos del nodo.
 				\item Validación: se ofrecerá realizar una prueba funcional al cliente.
 			\end{itemize}
 			\item Debe permitir el traslado a una nueva ubicación sin requerir una reconfiguración local.
@@ -732,7 +734,7 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 			\end{itemize}
 			\item Debe detectar y notificar de forma inmediata si un sensor tiene una falla de cableado.
 			\begin{itemize}
-				\item Verificación: se verificará el comportamiento del nodo al presentarse una condición de lazo abierto.
+				\item Verificación: se comprobará el comportamiento del nodo al presentarse una condición de lazo abierto.
 				\item Validación: se ofrecerá realizar una prueba funcional al cliente.
 			\end{itemize}
 		\end{enumerate}
@@ -742,11 +744,11 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 			\item Se deberá definir un nomenclador de tópicos que sea flexible y escalable.
 			\begin{itemize}
 				\item Verificación: se revisará la forma de asignación de tópicos, planteando situaciones extremas.
-				\item Validación: se realizará una prueba de definición de tópicos par distintos casos reales.
+				\item Validación: se realizará una prueba de definición de tópicos para distintos casos reales.
 			\end{itemize}
 			\item La estructura de la carga útil del mensaje debe soportar futuras  incorporaciones de sensores.
 			\begin{itemize}
-				\item Verificación: se verificará la capacidad de incorporar nuevas variables a la carga útil del mensaje.
+				\item Verificación: se comprobará la capacidad de incorporar nuevas variables a la carga útil del mensaje.
 				\item Validación: se realizará prueba de modificación de carga útil y su correspondiente representación.
 			\end{itemize}
 		\end{enumerate}
@@ -775,28 +777,28 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 			\end{itemize}
 			\item Se debe establecer un flujo de datos para procesar y enviar notificaciones de alarmas.
 			\begin{itemize}
-				\item Verificación: se verificará el establecimiento del flujo de datos.
-				\item Validación: se realizará prueba de envío de notificaciones.
+				\item Verificación: se comprobará el establecimiento del flujo de datos.
+				\item Validación: se realizará una prueba de envío de notificaciones.
 			\end{itemize}
 			\item Se deberá definir un mecanismo de notificación de alarmas y eventos a los usuarios registrados. Podrá ser por email y/o Telegram.
 			\begin{itemize}
-				\item Verificación: se verificará el establecimiento del flujo de datos.
-				\item Validación: se realizará prueba de envío de notificaciones.
+				\item Verificación: se comprobará el establecimiento del flujo de datos.
+				\item Validación: se realizará una prueba de envío de notificaciones.
 			\end{itemize}
 			\item La aplicación web dispondrá de un panel para visualizar información histórica de cada dispositivo.
 			\begin{itemize}
-				\item Verificación: se verificará el acceso a la funcionalidad.
+				\item Verificación: se inspeccionará el acceso a la funcionalidad.
 				\item Validación: se dará acceso al cliente para validar el panel de visualización de información histórica. 
 			\end{itemize}
 			\item La aplicación web permitirá la consulta de eventos y alarmas. Se debe recibir una notificación de forma inmediata ante un paro del motor.
 			\begin{itemize}
 				\item Verificación: se verificará la correcta activación de la notificación ante el evento de disparo.
-				\item Validación: se realizará prueba de funcionalidad simulada con el cliente.
+				\item Validación: se realizará una prueba de funcionalidad simulada con el cliente.
 			\end{itemize}
 			\item Se deben recibir notificaciones de advertencia de nivel de batería bajo y algún otro parámetro que se identifique de utilidad, para realizar un correcto mantenimiento preventivo.
 			\begin{itemize}
-				\item Verificación: se verificará la correcta notificación ante el evento de nivel de batería bajo.
-				\item Validación: se realizará prueba de funcionalidad simulada con el cliente.
+				\item Verificación: se inspeccionará la correcta notificación ante el evento de nivel de batería bajo.
+				\item Validación: se realizará una prueba de funcionalidad simulada con el cliente.
 			\end{itemize}
 		\end{enumerate}
 
@@ -804,12 +806,12 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 		\begin{enumerate}
 			\item Se deberá establecer un mecanismo seguro de gestión y validación de usuarios de la aplicación web.
 			\begin{itemize}
-				\item Verificación: se verificará la funcionalidad de gestión y validación de usuarios de la aplicación web.
-				\item Validación: se realizará demostración de uso de la aplicación web al cliente.
+				\item Verificación: se comprobará la funcionalidad de gestión y validación de usuarios de la aplicación web.
+				\item Validación: se realizará una demostración de uso de la aplicación web al cliente.
 			\end{itemize}
 			\item El acceso a la configuración de los dispositivos de medición estará protegido por un usuario y contraseña. Será utilizado únicamente por personal autorizado del sector TI de la empresa.
 			\begin{itemize}
-				\item Verificación: se verificará el proceso de alta del nodo en la red LoRaWAN
+				\item Verificación: se compobará el proceso de alta del nodo en la red LoRaWAN.
 				\item Validación: no es requerida por el cliente.
 			\end{itemize}
 		\end{enumerate}
@@ -818,23 +820,23 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 		\begin{enumerate}
 			\item Se deberá elaborar el manual de configuración e instalación del dispositivo de medición.
 			\begin{itemize}
-				\item Verificación: se verificará que la la estructura y contenido sea el requerido. 
+				\item Verificación: se comprobará que la estructura y contenido sea el requerido. 
 				\item Validación: se plantearán versiones preliminares a ser validadas por el cliente.
 			\end{itemize}			
 			\item Se deberá documentar la configuración de todos los componentes desplegados en Microsoft Azure.
 			\begin{itemize}
-				\item Verificación: se verificará que la la estructura y contenido sea el requerido. 
+				\item Verificación: se comprobará que la estructura y contenido sea el requerido. 
 				\item Validación: se enviará al área de IT el entregable para su validación.
 			\end{itemize}
 			\item Se deberá elaborar el manual de uso del software de usuario.
 			\begin{itemize}
-				\item Verificación: se verificará que la la estructura y contenido sea el requerido.
+				\item Verificación: se inspeccionará que la estructura y contenido sea el requerido.
 				\item Validación: se plantearán versiones preliminares a ser validadas por el cliente.
 			\end{itemize}
 			\item Se deberá desarrollar el informe de avance del proyecto.
 			\begin{itemize}
 				\item Verificación: se generará progresivamente la documentación técnica de cada etapa del proyecto y se cumplirán los procesos requeridos para disponer del informe de avance conformado previo a la entrega.
-				\item Validación: lectura, recepción de correcciones y sugerencias por parte del director del proyecto
+				\item Validación: lectura, recepción de correcciones y sugerencias por parte del director del proyecto.
 			\end{itemize}
 			\item Se deberá desarrollar la memoria final del proyecto.
 			\begin{itemize}
